@@ -1,0 +1,159 @@
+.footer {
+  background-color: var(--very-dark-cyan);
+  color: #fff;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr repeat(3, max-content);
+    align-items: flex-start;
+    justify-items: center;
+    padding: 20rem 4rem 2rem 12rem;
+
+    & .logo {
+      justify-self: flex-start;
+      filter: invert(1) grayscale(100%) brightness(5);
+      margin-bottom: 5rem;
+    }
+  }
+
+  @media only screen and (max-width: 25em) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 20rem 4rem 2rem 2rem;
+    }
+
+    & .logo {
+      width: 20rem;
+    }
+  }
+}
+
+.company {
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__info {
+    & > :first-child > :first-child {
+      align-self: start;
+      margin-top: 0.4rem;
+    }
+
+    &-box {
+      display: flex;
+      align-items: center;
+      width: 90%;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+
+      & img {
+        margin-right: 2.5rem;
+      }
+    }
+  }
+}
+
+.navigation {
+  grid-row: 2 / 3;
+
+  &__menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem 7rem;
+  }
+
+  &__item:nth-child(2) {
+    grid-row: 2 /3;
+    grid-column: 1 / 2;
+  }
+
+  &__item:nth-child(3) {
+    grid-row: 3 / 4;
+  }
+
+  &__link,
+  &__link:active,
+  &__link:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    border-bottom: 1px solid #fff;
+  }
+
+  @media only screen and (max-width: 25em) {
+    margin-top: 8rem;
+
+    &__menu {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.social-media {
+  grid-row: 2 / 3;
+  display: flex;
+
+  &__icon-box {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 0.8rem;
+    display: flex;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    &:hover {
+      border: 2px solid var(--color-pink);
+    }
+
+    &:hover > svg {
+      fill: var(--color-pink);
+    }
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+  }
+
+  @media only screen and (max-width: 25em) {
+    margin-top: 8rem;
+    align-self: center;
+  }
+}
+
+.copyright {
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+  font-size: 1.4rem;
+  justify-self: flex-end;
+  margin-top: 6rem;
+
+  @media only screen and (max-width: 25em) {
+    align-self: center;
+    margin-top: 3rem;
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+  grid-row: 4 / 5;
+  grid-column: 2 / 3;
+  font-size: 1.5rem;
+  text-align: center;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}
