@@ -1,0 +1,49 @@
+:root {
+  --color-pink: hsl(322, 100%, 66%);
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+  --font-primary: 'Open Sans', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --bp-small: 25em;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 25em) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  color: var(--grayish-blue);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-features {
+  padding: 2rem 0 16rem 0;
+}
